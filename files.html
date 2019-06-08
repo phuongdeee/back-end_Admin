@@ -106,7 +106,7 @@
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <a class="btn btn-default" data-toggle="modal" data-target="#addFile">Add New Folders</a>
+                                        <a class="btn btn-default" data-toggle="modal" data-target="#addFolder">Add New Folders</a>
                                     </div>
                                 </div>
                                 <br>
@@ -121,13 +121,13 @@
                                         <td>HCI</td>
                                         <td>10KB</td>
                                         <td>Dec 12, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editFile">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editFolder">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
                                     </tr>
                                     <tr>
                                         <td>JAVA</td>
                                         <td>50KB</td>
                                         <td>Dec 13, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editFile">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editFolder">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
                                     </tr>
                                 </table>
                             </div>
@@ -194,22 +194,104 @@
 
         <!-- Modals -->
 
-        <!-- Add File -->
+        <!-- Add Folder -->
+        <div class="modal fade" id="addFolder" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Add New Folder</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" placeholder="Post Title">
+                            </div>
+                            <div class="form-group">
+                                <label>Content</label>
+                                <textarea name="editor1" class="form-control" placeholder="Post Body"></textarea>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Published
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label>Tags</label>
+                                <input type="text" class="form-control" placeholder="Add Some Tags...">
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <input type="text" class="form-control" placeholder="Add Description...">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--         Edit Folder -->        
+        <div class="modal fade" id="editFolder" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Edit Folder</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" placeholder="Post Title">
+                            </div>
+                            <div class="form-group">
+                                <label>Content</label>
+                                <textarea name="editor1" class="form-control" placeholder="Post Body"></textarea>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Published
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label>Tags</label>
+                                <input type="text" class="form-control" placeholder="Add Some Tags...">
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <input type="text" class="form-control" placeholder="Add Description...">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+                <!-- Add File -->
         <div class="modal fade" id="addFile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <form>
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="myModalLabel">Add Post</h4>
+                            <h4 class="modal-title" id="myModalLabel">Add New File</h4>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <label>Post Title</label>
+                                <label>Name</label>
                                 <input type="text" class="form-control" placeholder="Post Title">
                             </div>
                             <div class="form-group">
-                                <label>Post Body</label>
+                                <label>Content</label>
                                 <textarea name="editor1" class="form-control" placeholder="Post Body"></textarea>
                             </div>
                             <div class="checkbox">
@@ -235,22 +317,22 @@
             </div>
         </div>
 
-        <!--         Edit Files -->        
+        <!--         Edit File -->        
         <div class="modal fade" id="editFile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <form>
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="myModalLabel">Edit Post</h4>
+                            <h4 class="modal-title" id="myModalLabel">Edit File</h4>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <label>Post Title</label>
+                                <label>Name</label>
                                 <input type="text" class="form-control" placeholder="Post Title">
                             </div>
                             <div class="form-group">
-                                <label>Post Body</label>
+                                <label>Content</label>
                                 <textarea name="editor1" class="form-control" placeholder="Post Body"></textarea>
                             </div>
                             <div class="checkbox">
@@ -275,7 +357,6 @@
                 </div>
             </div>
         </div>
-
 
         <script>
             CKEDITOR.replace('editor1');
