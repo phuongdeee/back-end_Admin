@@ -1,20 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <style>
-            #box{
-                text-align: center;
-                background: rgba(20%, 100%, 20%, .5);
-                border: 1px solid white; 
-                border-radius:2px;
-                width:250px;
-                height: auto;
-                position:relative; 
-                left: 50%; 
-                top: 0.1px;
-                font-family: serif;
-            }
-        </style>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,30 +34,37 @@
                         <li><a href="users.html">Users</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Welcome, HCI</a></li>
-                        <li><a href="login.html">Logout</a></li>
+                        <li class="dropdown">
+                            <img id="circle" class="nav-user-photo" style="width:40px;height:40px" src="images/IMG_4247.jpeg" alt="Photo" />
+                        <li>
+                            <a data-toggle="dropdown" href="">Welcome, Phuong Dee<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="#">Profile</a></li>
+                                <div class="divider"></div>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
 
-        <header id="header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10">
-                        <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Pages<small></small></h1>
-                    </div>
-                    <div class="col-md-2">
-                        <!--                        <div class="nav-search" id="nav-search">
-                                                    <div class="box">-->
-                        <div class="container-1">
-                            <span class="icon"><i class="fa fa-search"></i></span>
-                            <input type="search" id="search" placeholder="Search..." />
-                        </div>
-                    </div>
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard <small></small></h1>
+                </div>
+                <div class="col-md-2">
+                    <li class="nav-item hidden-sm-down">
+                        <form class="app-search">
+                            <input type="text" class="form-control" placeholder="Search for..."> <a class="srh-btn"><i class="ti-search"></i></a> </form>
+                    </li>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
         <section id="breadcrumb">
             <div class="container">
