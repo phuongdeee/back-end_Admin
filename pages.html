@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Admin IT | Pages</title>
+        <title>LAPT | Pages</title>
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
@@ -24,7 +24,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Admin IT</a>
+                    <a class="navbar-brand" href="#">LAPT</a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
@@ -32,6 +32,8 @@
                         <li class="active"><a href="pages.html">Pages</a></li>
                         <li><a href="posts.html">Posts</a></li>
                         <li><a href="users.html">Users</a></li>
+                        <li><a href="files.html">Files and Folders</a></li>
+
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
@@ -50,21 +52,22 @@
             </div>
         </nav>
 
-    <header id="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10">
-                    <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard <small></small></h1>
-                </div>
-                <div class="col-md-2">
-                    <li class="nav-item hidden-sm-down">
-                        <form class="app-search">
-                            <input type="text" class="form-control" placeholder="Search for..."> <a class="srh-btn"><i class="ti-search"></i></a> </form>
-                    </li>
+        <header id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard <small></small></h1>
+                        <strong>Welcome Administrator!</strong>
+                    </div>
+                    <div class="col-md-2">
+                        <li class="nav-item hidden-sm-down">
+                            <form class="app-search">
+                                <input type="text" class="form-control" placeholder="Search for..."> <a class="srh-btn"><i class="ti-search"></i></a> </form>
+                        </li>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
         <section id="breadcrumb">
             <div class="container">
@@ -87,6 +90,8 @@
                             <a href="pages.html" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Pages <span class="badge">12</span></a>
                             <a href="posts.html" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Posts <span class="badge">33</span></a>
                             <a href="users.html" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users <span class="badge">203</span></a>
+                            <a href="files.html" class="list-group-item"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> Files and Folders <span class="badge">30</span></a>
+
                         </div>
 
                         <div class="well">
@@ -167,7 +172,11 @@
         </section>
 
         <footer id="footer">
-            <p>Copyright Admin IT, &copy; 2019</p>
+            <p style="text-align: center; font-family: serif; font-size: 15px">
+                &copy; 2019  LAPT. All right served  <br><br>
+                Contact: lapt@gmail.com<br><br>
+                Address: 9th floor, C Building, HANU<br>
+            </p>
         </footer>
 
         <!-- Modals -->
@@ -212,7 +221,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Edit Page -->
         <div class="modal fade" id="editPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
@@ -221,33 +230,33 @@
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <h4 class="modal-title" id="myModalLabel">Edit Page</h4>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Page Title</label>
-                                <input type="text" class="form-control" placeholder="Page Title">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Page Title</label>
+                                    <input type="text" class="form-control" placeholder="Page Title">
+                                </div>
+                                <div class="form-group">
+                                    <label>Page Body</label>
+                                    <textarea name="editor1" class="form-control" placeholder="Page Body"></textarea>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Published
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>Tags</label>
+                                    <input type="text" class="form-control" placeholder="Add Some Tags...">
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <input type="text" class="form-control" placeholder="Add Description...">
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label>Page Body</label>
-                                <textarea name="editor1" class="form-control" placeholder="Page Body"></textarea>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" onclick="editFunction()">Save changes</button>
                             </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox"> Published
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <label>Tags</label>
-                                <input type="text" class="form-control" placeholder="Add Some Tags...">
-                            </div>
-                            <div class="form-group">
-                                <label>Description</label>
-                                <input type="text" class="form-control" placeholder="Add Description...">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary" onclick="editFunction()">Save changes</button>
-                        </div>
                     </form>
                 </div>
             </div>
@@ -256,7 +265,7 @@
         <script>
             CKEDITOR.replace('editor1');
         </script>
-        
+
 
         <!-- Bootstrap core JavaScript
         ================================================== -->
