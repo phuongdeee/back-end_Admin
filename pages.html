@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <style>
+            #box{
+                text-align: center;
+                background: rgba(20%, 100%, 20%, .5);
+                border: 1px solid white; 
+                border-radius:2px;
+                width:250px;
+                height: auto;
+                position:relative; 
+                left: 50%; 
+                top: 0.1px;
+                font-family: serif;
+            }
+        </style>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +23,9 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+        <script src="js/delete.js"></script>
+        <script src="js/edit.js"></script>
+        <script src="js/add.js"></script>
     </head>
     <body>
 
@@ -29,8 +46,6 @@
                         <li class="active"><a href="pages.html">Pages</a></li>
                         <li><a href="posts.html">Posts</a></li>
                         <li><a href="users.html">Users</a></li>
-                        <li><a href="files.html">Files and Folders</a></li>
-
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#">Welcome, HCI</a></li>
@@ -66,6 +81,7 @@
                 </ol>
             </div>
         </section>
+        <div id="box"></div>
 
         <section id="main">
             <div class="container">
@@ -76,10 +92,8 @@
                                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
                             </a>
                             <a href="pages.html" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Pages <span class="badge">12</span></a>
-                            <a href="posts.html" class="list-group-item"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Posts <span class="badge">33</span></a>
+                            <a href="posts.html" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Posts <span class="badge">33</span></a>
                             <a href="users.html" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users <span class="badge">203</span></a>
-                            <a href="files.html" class="list-group-item"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> Files and Folders <span class="badge">30</span></a>
-
                         </div>
 
                         <div class="well">
@@ -115,19 +129,25 @@
                                         <th>Title</th>
                                         <th>Published</th>
                                         <th>Created</th>
-                                        <th>Action</th>
+                                        <th></th>
                                     </tr>
                                     <tr>
                                         <td>Home</td>
                                         <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
                                         <td>Dec 12, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPage">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPage">Edit</a> <a class="btn btn-danger" id="delete-item"
+                                                                                                                               onclick="deleteFunction('Homepage')">
+                                                Delete</a>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>About</td>
                                         <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
                                         <td>Dec 13, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPage">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPage">Edit</a> <a class="btn btn-danger" href="#"
+                                                                                                                               onclick="deleteFunction('About')">
+                                                Delete</a>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Services</td>
@@ -139,7 +159,10 @@
                                         <td>Contact</td>
                                         <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
                                         <td>Dec 14, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPage">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPage">Edit</a> <a class="btn btn-danger" href="#"
+                                                                                                                               onclick="deleteFunction('Contact')">
+                                                Delete</a>
+                                        </td>
                                     </tr>
                                 </table>
                             </div>
@@ -150,28 +173,6 @@
             </div>
         </section>
 
-        <!-- Pagination -->
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12 text-center">  
-                <ul class="pagination">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                    </li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
         <footer id="footer">
             <p>Copyright Admin IT, &copy; 2019</p>
         </footer>
@@ -185,7 +186,7 @@
                     <form>
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="myModalLabel">Add New Page</h4>
+                            <h4 class="modal-title" id="myModalLabel">Add Page</h4>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
@@ -212,13 +213,13 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <button type="submit" class="btn btn-primary" onclick="addFunction('Page')">Save changes</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-
+        
         <!-- Edit Page -->
         <div class="modal fade" id="editPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
@@ -227,7 +228,6 @@
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <h4 class="modal-title" id="myModalLabel">Edit Page</h4>
-                        </div>
                         <div class="modal-body">
                             <div class="form-group">
                                 <label>Page Title</label>
@@ -253,7 +253,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <button type="submit" class="btn btn-primary" onclick="editFunction()">Save changes</button>
                         </div>
                     </form>
                 </div>
@@ -263,6 +263,7 @@
         <script>
             CKEDITOR.replace('editor1');
         </script>
+        
 
         <!-- Bootstrap core JavaScript
         ================================================== -->

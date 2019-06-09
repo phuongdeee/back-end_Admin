@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <style>
+            #box{
+                text-align: center;
+                background: rgba(20%, 100%, 20%, .5);
+                border: 1px solid white; 
+                border-radius:2px;
+                width:250px;
+                height: auto;
+                position:relative; 
+                left: 50%; 
+                top: 0.1px;
+                font-family: serif;
+            }
+        </style>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +23,9 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+        <script src="js/delete.js"></script>
+        <script src="js/edit.js"></script>
+        <script src="js/add.js"></script>
     </head>
     <body>
 
@@ -66,6 +83,7 @@
                 </ol>
             </div>
         </section>
+        <div id="box"></div>
 
         <section id="main">
             <div class="container">
@@ -121,25 +139,37 @@
                                         <td>Jill Smith</td>
                                         <td>jillsmith@gmail.com</td>
                                         <td>Dec 12, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editUser">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editUser">Edit</a> <a class="btn btn-danger" href="#"
+                                                                                                                               onclick="deleteFunction('Jill Smith')">
+                                                Delete
+                                            </a></td>
                                     </tr>
                                     <tr>
                                         <td>Eve Jackson</td>
                                         <td>ejackson@yahoo.com</td>
                                         <td>Dec 13, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editUser">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editUser">Edit</a> <a class="btn btn-danger" href="#"
+                                                                                                                               onclick="deleteFunction('Eve Jackson')">
+                                                Delete
+                                            </a></td>
                                     </tr>
                                     <tr>
                                         <td>Stephanie Landon</td>
                                         <td>landon@yahoo.com</td>
                                         <td>Dec 14, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editUser">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editUser">Edit</a> <a class="btn btn-danger" href="#"
+                                                                                                                               onclick="deleteFunction('Stephanie Landon')">
+                                                Delete
+                                            </a></td>
                                     </tr>
                                     <tr>
                                         <td>Mike Johnson</td>
                                         <td>mjohnson@gmail.com</td>
                                         <td>Dec 15, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editUser">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editUser">Edit</a> <a class="btn btn-danger" href="#"
+                                                                                                                               onclick="deleteFunction('Mike Johnson')">
+                                                Delete
+                                            </a></td>
                                     </tr>
                                 </table>
                             </div>
@@ -247,7 +277,7 @@
                                     <div class="col-md-offset-3 col-md-9">
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary">Save changes</button>
+                                            <button type="submit" class="btn btn-primary" onclick="addFunction('User')">Save changes</button>
                                         </div>
                                     </div>
                                 </div>
@@ -326,7 +356,7 @@
                                     <div class="col-md-offset-3 col-md-9">
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary">Save changes</button>
+                                            <button type="submit" class="btn btn-primary" onclick="editFunction()">Save changes</button>
                                         </div>
                                     </div>
                                 </div>
