@@ -138,8 +138,8 @@
                                         <td>Editor</td>
                                         <td>jillsmith@gmail.com</td>
                                         <td>Dec 12, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editUser">Edit</a> <a class="btn btn-danger" href="#"
-                                                                                                                               onclick="deleteFunction('Jill Smith')">
+                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editUser1">Edit</a> <a class="btn btn-danger" href="#"
+                                                                                                                                onclick="deleteFunction('Jill Smith')">
                                                 Delete
                                             </a></td>
                                     </tr>
@@ -148,8 +148,8 @@
                                         <td>Author</td>
                                         <td>ejackson@yahoo.com</td>
                                         <td>Dec 13, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editUser">Edit</a> <a class="btn btn-danger" href="#"
-                                                                                                                               onclick="deleteFunction('Eve Jackson')">
+                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editUser2">Edit</a> <a class="btn btn-danger" href="#"
+                                                                                                                                onclick="deleteFunction('Eve Jackson')">
                                                 Delete
                                             </a></td>
                                     </tr>
@@ -158,18 +158,8 @@
                                         <td>Contributor</td>
                                         <td>landon@yahoo.com</td>
                                         <td>Dec 14, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editUser">Edit</a> <a class="btn btn-danger" href="#"
-                                                                                                                               onclick="deleteFunction('Stephanie Landon')">
-                                                Delete
-                                            </a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mike Johnson</td>
-                                        <td>Subscriber</td>
-                                        <td>mjohnson@gmail.com</td>
-                                        <td>Dec 15, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editUser">Edit</a> <a class="btn btn-danger" href="#"
-                                                                                                                               onclick="deleteFunction('Mike Johnson')">
+                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editUser3">Edit</a> <a class="btn btn-danger" href="#"
+                                                                                                                                onclick="deleteFunction('Stephanie Landon')">
                                                 Delete
                                             </a></td>
                                     </tr>
@@ -181,30 +171,30 @@
                 </div>
             </div>
 
-        <!-- Pagination -->
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12 text-center">  
-                <ul class="pagination">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                    </li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </li>
-                </ul>
+            <!-- Pagination -->
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 text-center">  
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
         </section>
-        
+
         <footer id="footer">
             <p style="text-align: center; font-family: serif; font-size: 15px">
                 &copy; 2019  LAPT. All right served  <br><br>
@@ -267,7 +257,7 @@
                                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Role </label>
                                     <div class="col-sm-9">
                                         <select type="text" id="form-field-1" placeholder="required" class="col-xs-10 col-sm-5" />
-                                        <option value=""></option>
+                                        <option value="">Editor</option>
                                         <option value="Ed">Editor</option>
                                         <option value="Su">Subscriber</option>
                                         <option value="Co">Contributor</option>
@@ -294,7 +284,7 @@
         </div>
 
         <!-- Edit User -->
-        <div class="modal fade" id="editUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="editUser1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <form>
@@ -308,7 +298,7 @@
                                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> User Name </label>
 
                                     <div class="col-sm-9">
-                                        <input type="text" id="form-field-1" placeholder="required" class="col-xs-10 col-sm-5" />
+                                        <input type="text" id="name" value="Jill Smith" class="form-control ">
                                     </div>
                                 </div>
 
@@ -316,7 +306,7 @@
                                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Email </label>
 
                                     <div class="col-sm-9">
-                                        <input type="text" id="form-field-1" placeholder="required" class="col-xs-10 col-sm-5" />
+                                        <input type="text" id="name" value="jillsmith@gmail.com" class="form-control ">
                                     </div>
                                 </div>
 
@@ -324,21 +314,21 @@
                                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> First Name </label>
 
                                     <div class="col-sm-9">
-                                        <input type="text" id="form-field-1" placeholder="" class="col-xs-10 col-sm-5" />
+                                        <input type="text" id="name" value="Smith" class="form-control ">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Last Name </label>
 
                                     <div class="col-sm-9">
-                                        <input type="text" id="form-field-1" placeholder="" class="col-xs-10 col-sm-5" />
+                                        <input type="text" id="name" value="Jill" class="form-control ">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Password </label>
 
                                     <div class="col-sm-9">
-                                        <input type="password" id="form-field-1" placeholder="required" class="col-xs-10 col-sm-5" />
+                                        <input type="password" id="form-field-1" value="Jill" class="col-xs-10 col-sm-5" />
                                     </div>
                                 </div>
                                 <div>
@@ -361,7 +351,7 @@
                                     <div class="col-md-offset-3 col-md-9">
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary" onclick="editFunction()">Save changes</button>
+                                            <button type="submit" class="btn btn-primary" onclick="addFunction('User')">Save changes</button>
                                         </div>
                                     </div>
                                 </div>
@@ -370,7 +360,158 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="editUser2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Edit User</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> User Name </label>
 
+                                    <div class="col-sm-9">
+                                        <input type="text" id="name" value="Eve Jackson" class="form-control ">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Email </label>
+
+                                    <div class="col-sm-9">
+                                        <input type="text" id="name" value="ejackson@yahoo.com" class="form-control ">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> First Name </label>
+
+                                    <div class="col-sm-9">
+                                        <input type="text" id="name" value="Jackson" class="form-control ">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Last Name </label>
+
+                                    <div class="col-sm-9">
+                                        <input type="text" id="name" value="Eve" class="form-control ">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Password </label>
+
+                                    <div class="col-sm-9">
+                                        <input type="password" id="form-field-1" value="Jill" class="col-xs-10 col-sm-5" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Role </label>
+                                    <div class="col-sm-9">
+                                        <select type="text" id="form-field-1" placeholder="required" class="col-xs-10 col-sm-5" />
+                                        <option value="">Author</option>
+                                        <option value="Ed">Editor</option>
+                                        <option value="Su">Subscriber</option>
+                                        <option value="Co">Contributor</option>
+                                        <option value="Au">Author</option>
+                                        <option value="Ad">Administrator</option>
+                                        <option value="">__No role for this site__</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="clearfix form-actions">
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary" onclick="addFunction('User')">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="editUser3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Edit User</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> User Name </label>
+
+                                    <div class="col-sm-9">
+                                        <input type="text" id="name" value="Stephanie Landon" class="form-control ">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Email </label>
+
+                                    <div class="col-sm-9">
+                                        <input type="text" id="name" value="landon@yahoo.com" class="form-control ">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> First Name </label>
+
+                                    <div class="col-sm-9">
+                                        <input type="text" id="name" value="Landon" class="form-control ">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Last Name </label>
+
+                                    <div class="col-sm-9">
+                                        <input type="text" id="name" value="Stephanie" class="form-control ">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Password </label>
+
+                                    <div class="col-sm-9">
+                                        <input type="password" id="form-field-1" value="Jillcbf" class="col-xs-10 col-sm-5" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Role </label>
+                                    <div class="col-sm-9">
+                                        <select type="text" id="form-field-1" placeholder="required" class="col-xs-10 col-sm-5" />
+                                        <option value="">Contributor</option>
+                                        <option value="Ed">Editor</option>
+                                        <option value="Su">Subscriber</option>
+                                        <option value="Co">Contributor</option>
+                                        <option value="Au">Author</option>
+                                        <option value="Ad">Administrator</option>
+                                        <option value="">__No role for this site__</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="clearfix form-actions">
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary" onclick="addFunction('User')">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
         <script>
             CKEDITOR.replace('editor1');

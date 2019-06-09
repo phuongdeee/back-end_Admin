@@ -8,6 +8,7 @@
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        <link rel = "stylesheet"  href = "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" >
         <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
         <script src="js/delete.js"></script>
         <script src="js/edit.js"></script>
@@ -134,8 +135,8 @@
                                         <td>Tech Event Calendar 2019</td>
                                         <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
                                         <td>Dec 12, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPost">Edit</a> <a class="btn btn-danger" href="#"
-                                                                                                                               onclick="deleteFunction('Tech Event Calendar 2019')">
+                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPost1">Edit</a> <a class="btn btn-danger" href="#"
+                                                                                                                                onclick="deleteFunction('Tech Event Calendar 2019')">
                                                 Delete</a>
                                         </td>
                                     </tr>
@@ -143,8 +144,8 @@
                                         <td>IOS 13 Rumors: Everything you need to know</td>
                                         <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
                                         <td>Dec 13, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPost">Edit</a> <a class="btn btn-danger" href="#"
-                                                                                                                               onclick="deleteFunction('IOS 13 Rumors: Everything...')">
+                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPost2">Edit</a> <a class="btn btn-danger" href="#"
+                                                                                                                                onclick="deleteFunction('IOS 13 Rumors: Everything...')">
                                                 Delete
                                             </a></td>
                                     </tr>
@@ -152,16 +153,7 @@
                                         <td>Microsoft's Fantastic XBOX Game Pas Subscription Service Is Coming To The PC</td>
                                         <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
                                         <td>Dec 13, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPost">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>How to remove malware from your Windows PC</td>
-                                        <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
-                                        <td>Dec 14, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPost">Edit</a> <a class="btn btn-danger" href="#"
-                                                                                                                               onclick="deleteFunction('How to remove malware...')">
-                                                Delete
-                                            </a></td>
+                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPost3">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
                                     </tr>
                                 </table>
                             </div>
@@ -223,8 +215,8 @@
             </div>
         </div>
 
-        <!--         Edit Post 
-        -->        <div class="modal fade" id="editPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <!--         Edit Post --> 
+        <div class="modal fade" id="editPost1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <form>
@@ -235,7 +227,85 @@
                         <div class="modal-body">
                             <div class="form-group">
                                 <label>Post Title</label>
-                                <input type="text" class="form-control" placeholder="Post Title">
+                                <input type="text" id="name" value="Tech Event Calendar 2019" class="form-control ">
+                            </div>
+                            <div class="form-group">
+                                <label>Post Body</label>
+                                <textarea name="editor1" class="form-control" placeholder="Post Body"></textarea>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Published
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label>Tags</label>
+                                <input type="text" class="form-control" placeholder="Add Some Tags...">
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <input type="text" class="form-control" placeholder="Add Description...">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" onclick="editFunction()">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="editPost2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Edit Post</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Post Title</label>
+                                <input type="text" id="name" value="IOS 13 Rumors: Everything you need to know" class="form-control ">
+                            </div>
+                            <div class="form-group">
+                                <label>Post Body</label>
+                                <textarea name="editor1" class="form-control" placeholder="Post Body"></textarea>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Published
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label>Tags</label>
+                                <input type="text" class="form-control" placeholder="Add Some Tags...">
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <input type="text" class="form-control" placeholder="Add Description...">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" onclick="editFunction()">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="editPost3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Edit Post</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Post Title</label>
+                                <input type="text" id="name" value="Microsoft's Fantastic XBOX Game Pas Subscription Service Is Coming To The PC" class="form-control ">
                             </div>
                             <div class="form-group">
                                 <label>Post Body</label>

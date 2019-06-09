@@ -135,8 +135,8 @@
                                         <td>Home</td>
                                         <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
                                         <td>Dec 12, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPage">Edit</a> <a class="btn btn-danger" id="delete-item"
-                                                                                                                               onclick="deleteFunction('Homepage')">
+                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPage1">Edit</a> <a class="btn btn-danger" id="delete-item"
+                                                                                                                                onclick="deleteFunction('Homepage')">
                                                 Delete</a>
                                         </td>
                                     </tr>
@@ -144,8 +144,8 @@
                                         <td>About</td>
                                         <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
                                         <td>Dec 13, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPage">Edit</a> <a class="btn btn-danger" href="#"
-                                                                                                                               onclick="deleteFunction('About')">
+                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPage2">Edit</a> <a class="btn btn-danger" href="#"
+                                                                                                                                onclick="deleteFunction('About')">
                                                 Delete</a>
                                         </td>
                                     </tr>
@@ -153,16 +153,7 @@
                                         <td>Services</td>
                                         <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
                                         <td>Dec 13, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPage">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Contact</td>
-                                        <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
-                                        <td>Dec 14, 2016</td>
-                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPage">Edit</a> <a class="btn btn-danger" href="#"
-                                                                                                                               onclick="deleteFunction('Contact')">
-                                                Delete</a>
-                                        </td>
+                                        <td><a class="btn btn-default" data-toggle="modal" data-target="#editPage3">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
                                     </tr>
                                 </table>
                             </div>
@@ -225,54 +216,136 @@
         </div>
 
         <!-- Edit Page -->
-        <div class="modal fade" id="editPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="editPage1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <form>
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <h4 class="modal-title" id="myModalLabel">Edit Page</h4>
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label>Page Title</label>
-                                    <input type="text" class="form-control" placeholder="Page Title">
-                                </div>
-                                <div class="form-group">
-                                    <label>Page Body</label>
-                                    <textarea name="editor1" class="form-control" placeholder="Page Body"></textarea>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox"> Published
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label>Tags</label>
-                                    <input type="text" class="form-control" placeholder="Add Some Tags...">
-                                </div>
-                                <div class="form-group">
-                                    <label>Description</label>
-                                    <input type="text" class="form-control" placeholder="Add Description...">
-                                </div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Page Title</label>
+                                <input type="text" id="name" value="Home" class="form-control ">
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary" onclick="editFunction()">Save changes</button>
+                            <div class="form-group">
+                                <label>Page Body</label>
+                                <textarea name="editor1" class="form-control" placeholder="Page Body"></textarea>
                             </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Published
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label>Tags</label>
+                                <input type="text" class="form-control" placeholder="Add Some Tags...">
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <input type="text" class="form-control" placeholder="Add Description...">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" onclick="editFunction()">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="editPage2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Edit Page</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Page Title</label>
+                                <input type="text" id="name" value="About" class="form-control ">
+                            </div>
+                            <div class="form-group">
+                                <label>Page Body</label>
+                                <textarea name="editor1" class="form-control" placeholder="Page Body"></textarea>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Published
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label>Tags</label>
+                                <input type="text" class="form-control" placeholder="Add Some Tags...">
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <input type="text" class="form-control" placeholder="Add Description...">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" onclick="editFunction()">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+                <div class="modal fade" id="editPage3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Edit Page</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Page Title</label>
+                                <input type="text" id="name" value="Services" class="form-control ">
+                            </div>
+                            <div class="form-group">
+                                <label>Page Body</label>
+                                <textarea name="editor1" class="form-control" placeholder="Page Body"></textarea>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Published
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label>Tags</label>
+                                <input type="text" class="form-control" placeholder="Add Some Tags...">
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <input type="text" class="form-control" placeholder="Add Description...">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" onclick="editFunction()">Save changes</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
 
-        <script>
-            CKEDITOR.replace('editor1');
-        </script>
 
 
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-    </body>
-</html>
+                <script>
+                    CKEDITOR.replace('editor1');
+                </script>
+
+
+                <!-- Bootstrap core JavaScript
+                ================================================== -->
+                <!-- Placed at the end of the document so the pages load faster -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+                </body>
+                </html>
