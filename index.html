@@ -29,7 +29,7 @@
                         <li><a href="pages.html">Pages</a></li>
                         <li><a href="posts.html">Posts</a></li>
                         <li><a href="users.html">Users</a></li>
-                        <li><a href="files.html">Files and Folders</a></li>
+                        <li><a href="files.html">File and Folders</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
@@ -192,6 +192,29 @@
             Contact: lapt@gmail.com<br><br>
             Address: 9th floor, C Building, HANU<br>
         </p>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <script>
+// When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+// When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+
     </footer>
 
     <!-- Modals -->

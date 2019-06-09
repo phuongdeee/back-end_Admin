@@ -170,6 +170,27 @@
                 Contact: lapt@gmail.com<br><br>
                 Address: 9th floor, C Building, HANU<br>
             </p>
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+            <script>
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function () {
+                    scrollFunction()
+                };
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        document.getElementById("myBtn").style.display = "block";
+                    } else {
+                        document.getElementById("myBtn").style.display = "none";
+                    }
+                }
+
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+            </script>
         </footer>
 
         <!-- Modals -->
@@ -255,7 +276,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="modal fade" id="editPage2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -295,7 +316,7 @@
                 </div>
             </div>
         </div>
-                <div class="modal fade" id="editPage3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="editPage3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <form>
@@ -337,15 +358,15 @@
 
 
 
-                <script>
-                    CKEDITOR.replace('editor1');
-                </script>
+        <script>
+            CKEDITOR.replace('editor1');
+        </script>
 
 
-                <!-- Bootstrap core JavaScript
-                ================================================== -->
-                <!-- Placed at the end of the document so the pages load faster -->
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-                <script src="js/bootstrap.min.js"></script>
-                </body>
-                </html>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
