@@ -9,6 +9,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+        <script src="js/top.js"></script>
     </head>
     <body>
 
@@ -61,10 +62,11 @@
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <li class="nav-item hidden-sm-down">
+                    <div style="margin-top: 40px">
                         <form class="app-search">
-                            <input type="text" class="form-control" placeholder="Search for..."> <a class="srh-btn"><i class="ti-search"></i></a> </form>
-                    </li>
+                            <input type="text" class="form-control" placeholder="Search for...">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -193,27 +195,7 @@
             Address: 9th floor, C Building, HANU<br>
         </p>
 
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-        <script>
-// When the user scrolls down 20px from the top of the document, show the button
-            window.onscroll = function () {
-                scrollFunction()
-            };
-
-            function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    document.getElementById("myBtn").style.display = "block";
-                } else {
-                    document.getElementById("myBtn").style.display = "none";
-                }
-            }
-
-// When the user clicks on the button, scroll to the top of the document
-            function topFunction() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
-        </script>
+        <button onclick="topFunction()" class="glyphicon glyphicon-chevron-up" id="myBtn" title="Go to top"></button>
 
     </footer>
 
